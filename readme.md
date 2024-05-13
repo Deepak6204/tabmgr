@@ -7,7 +7,7 @@ Welcome to the Tab Manager extension! This extension helps you manage your brows
 To install the Tab Manager extension locally using developer mode, follow these steps:
 
 1. **Download the Extension:**
-   - Clone or download the extension code from the [repository](https://github.com/your-username/tab-manager-extension).
+   - Clone or download the extension code from the [repository](https://github.com/Deepak6204/tabmgr.git).
 
 2. **Open Chrome Extensions:**
    - Open Google Chrome browser.
