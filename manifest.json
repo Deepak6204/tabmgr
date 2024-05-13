@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Tabman",
+  "version": "1.0",
+  "description": "Tabman is an extension that help us to manage the tabs in a quite easy manner, if you are a person who opens a lot of tabs on a daily basis then this extension is made jsut for you.",
+  "permissions": ["tabs"],
+  "commands": {
+    "openExtension": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+E",
+        "mac": "MacCtrl+Shift+E"
+      },
+      "description": "Open Your Extension"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png",
+      "128": "icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "options_page": "user_guide.html"
+  
+}

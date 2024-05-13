@@ -1,0 +1,136 @@
+/* Additional styles for toggle button */
+.toggle-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+input[type="checkbox"] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+/* Additional styles for toggle slider */
+.toggle-label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 24px;
+    position: relative;
+    background-color: #888; /* Slider background color */
+    border-radius: 30px; /* Rounded slider */
+    display: inline-block;
+}
+
+/* Rounded slider */
+.toggle-label:after {
+    content: '';
+    position: absolute;
+    width: 20px; /* Slider button size */
+    height: 20px; /* Slider button size */
+    background-color: #fff; /* Slider button color */
+    border-radius: 50%; /* Rounded slider button */
+    top: 2px; /* Vertical position of slider button */
+    left: 2px; /* Initial position of slider button */
+    transition: 0.3s; /* Smooth transition for slider button */
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.5); /* Shadow for slider button */
+}
+
+/* Dark mode slider styles */
+input:checked + .toggle-label {
+    background-color: #0078D7; /* Dark mode slider background color */
+}
+
+input:checked + .toggle-label:after {
+    left: calc(100% - 22px); /* Move slider button to the right when checked */
+}
+
+
+/* Existing styles */
+:root {
+    --background-color: #fff;
+    --text-color: #333;
+    --item-background-color: #fff;
+    --border-color: #ccc;
+}
+
+.dark-mode {
+    --background-color: #111;
+    --text-color: #ccc;
+    --item-background-color: #111;
+    --border-color: #666;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    width: 400px;
+    font-size: 14px;
+}
+
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+h1 {
+    color: #0078D7;
+    margin-bottom: 10px;
+}
+
+#tab-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.tab-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px;
+    background-color: var(--item-background-color);
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+}
+
+.favicon {
+    width: 16px;
+    height: 16px;
+    margin-right: 10px;
+}
+
+.tab-item button {
+    background: none;
+    border: 0px;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 4px 8px;
+    color: var(--button-text-color);
+}
+
+.tab-item span.tab-title {
+    flex-grow: 1;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: inherit;
+}
+
+.tab-item:hover {
+    background-color: #333; /* Lighter background color on hover */
+}
+
+body:not(.dark-mode) .tab-item:hover {
+    background-color: #555; /* Lighter background color on hover */
+    color: #fff; /* Darker text color on hover */
+}
+
+body:is(.dark-mode) a{
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+}
